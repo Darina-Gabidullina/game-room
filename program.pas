@@ -15,7 +15,7 @@ end;
 procedure writeCurrentRoom();
 begin
   writeln();
-  writeln('Текущая комната:');
+  writeln('РўРµРєСѓС‰Р°СЏ РєРѕРјРЅР°С‚Р°:');
   writeRoom(currentRoom);
 end;
 
@@ -25,7 +25,7 @@ var
 begin
   prev := (currentRoom + 1 + 5) mod 5;
   next := (currentRoom - 1 + 5) mod 5;
-  writeln('Доступные комнаты:');
+  writeln('Р”РѕСЃС‚СѓРїРЅС‹Рµ РєРѕРјРЅР°С‚С‹:');
   writeRoom(prev);
   writeRoom(next);
 end;
@@ -36,11 +36,11 @@ begin
 end;
 
 begin
-  rooms[0] := 'Гостиная';
-  rooms[1] := 'Спальня';
-  rooms[2] := 'Кухня';
-  rooms[3] := 'Детская';
-  rooms[4] := 'Библиотека';
+  rooms[0] := 'Р“РѕСЃС‚РёРЅР°СЏ';
+  rooms[1] := 'РЎРїР°Р»СЊРЅСЏ';
+  rooms[2] := 'РљСѓС…РЅСЏ';
+  rooms[3] := 'Р”РµС‚СЃРєР°СЏ';
+  rooms[4] := 'Р‘РёР±Р»РёРѕС‚РµРєР°';
   
   currentRoom := 0;
   
@@ -48,7 +48,7 @@ begin
   begin
     writeCurrentRoom();
     writeAvailableRooms();
-    writeln('Введите номер комнаты:');
+    writeln('Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ РєРѕРјРЅР°С‚С‹:');
     readln(room);
     if checkRoom(room) then
       currentRoom := room;
